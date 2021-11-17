@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 1127032468}
   - component: {fileID: 1127032469}
   - component: {fileID: 1127032470}
+  - component: {fileID: 1127032472}
   m_Layer: 0
   m_Name: Krockomorty
   m_TagString: Untagged
@@ -507,13 +508,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &1127032469
 CapsuleCollider2D:
@@ -563,6 +564,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -0.079, y: -3.416, z: -1.328}
+--- !u!114 &1127032472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127032467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9832e6ee8fc3dbb408928a4469d4b019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 1
 --- !u!1 &1179969953
 GameObject:
   m_ObjectHideFlags: 3
