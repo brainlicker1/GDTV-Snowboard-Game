@@ -11,10 +11,11 @@ public class FinishLine : MonoBehaviour
         
     void OnTriggerEnter2D(Collider2D other) {
         
-        finishEffect.Play();
+       
 
        if(other.tag == "Player") {
-
+            finishEffect.Play();
+           GetComponent<AudioSource>().Play();
            Invoke("RestartLevel", restartTime);
        }
        

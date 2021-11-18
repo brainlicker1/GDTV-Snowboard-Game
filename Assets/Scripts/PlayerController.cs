@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float torqueAmount = 1;
     [SerializeField] float boostSpeed = 1f;
     [SerializeField] float baseSpeed= 1f;
-
+    bool canMove = true;
     SurfaceEffector2D surfaceEffector2D;
 
     void Start()
@@ -22,9 +22,11 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-       playerControls();
-       RespondToBoost();
+    {   if(canMove) {
+         playerControls();
+         RespondToBoost();
+    }
+       
     }
 
      void RespondToBoost()
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+   
     void playerControls(){
 
          if(Input.GetKey(KeyCode.A)){
@@ -53,4 +56,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
+     public void ControlLock(){
+
+        canMove = false;
+
+    }
 }
